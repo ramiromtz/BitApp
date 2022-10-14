@@ -1,9 +1,19 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div class="container">
+    <form class="container__form" autocomplete="off">
+      <h1><img src="../assets/img/bit-logo.svg"></h1>
+      <div class="container__form--input">
+        <input type="email" id="email" placeholder=" ">
+        <label for="email">Correo</label>
+      </div>
+      <div class="container__form--input">
+        <input type="password" id="password" placeholder=" ">
+        <label for="password">Contraseña</label>
+      </div>
+      <div class="container__form--forgot">
+        <a routerLink="/rocover-pass">Olvidé mi contraseña</a>
+      </div>
+      <button type="submit" (click)="entrar();">Ingresar</button>
+    </form>
+  </div>
 </ion-content>

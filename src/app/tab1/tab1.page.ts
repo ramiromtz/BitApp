@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  data: any;
+
+  constructor(private barcodeScanner: BarcodeScanner) {}
+
+  escanear() {
+    this.barcodeScanner.scan().then(barcodeData => {
+      this.data = barcodeData.text;
+    }).catch(err => {
+      console.log("Error: ", err);
+    });
+  }
 
 }

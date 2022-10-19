@@ -7,6 +7,9 @@
 
     form {
         width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     input {
@@ -15,5 +18,10 @@
         outline: none;
         border: 1px solid forestgreen;
         width: 100%;
+    }
+
+    .container__img {
+        width: 250px;
+        height: auto;
     }
 }

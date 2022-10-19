@@ -12,6 +12,7 @@ export class Tab1Page {
 
   constructor(private barcodeScanner: BarcodeScanner) {}
 
+  // función para escanear
   escanear() {
     this.barcodeScanner.scan().then(barcodeData => {
       this.data = barcodeData.text;

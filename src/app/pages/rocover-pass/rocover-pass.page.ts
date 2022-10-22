@@ -12,4 +12,8 @@ export class RocoverPassPage implements OnInit {
   ngOnInit() {
   }
 
+  send() {
+    alert("Hemos enviado un código a tu correo para recuperar tu contraseña");
+  }
+
 }

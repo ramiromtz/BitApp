@@ -1,3 +1,11 @@
+/* Paleta de colores */
+
+$color1: #010507;
+$color2: #121a1c;
+$color3: #373438;
+$color4: #595d60;
+$color5: #8c968b;
+
 * {
     padding: 0;
     margin: 0;
@@ -7,10 +15,16 @@
 .container {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to right top, #000000, #101010, #191919, #232323, #2c2c2c);
+    background: $color4;
+    // background: rgb(64,64,64);
+    // background: linear-gradient(90deg, rgba(64,64,64,1) 0%, rgba(103,103,103,1) 50%, rgba(68,68,68,1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .container__form {
+        padding: 1.5rem 2rem;
+    }
 
     h1 {
         text-align: center;
@@ -19,11 +33,12 @@
 
     .container__form--input {
         position: relative;
-        margin-bottom: 1.8rem;
+        margin-bottom: 2.8rem;
     }
 
     .container__form--alert {
-        color: rgb(255, 112, 112);
+        color: #fff;
+        font-size: 12px;
     }
 
     input{
@@ -31,23 +46,23 @@
         background: none;
         border: none;
         outline: none;
-        border-bottom: 1px solid #c3c3c3;
+        border-bottom: 1px solid #cfcfcf;
         color: #fff;
     }
 
     button {
+        width: 100%;
         padding: 1rem 1.5rem;
         font-weight: 400;
         font-size: 18px;
         outline: none;
         color: #fff;
         border: none;
-        border-radius: 7px;
-        background-image: linear-gradient(to right top, #5e18ff, #5b14ff, #5810ff, #540cff, #5106ff);
+        background-color: $color2;
     }
 
     label {
-        color: #c3c3c3;
+        color: #cfcfcf;
         position: absolute;
         top: -5px;
         left: 5px;
@@ -73,7 +88,7 @@
     }
 
     .container__form--forgot a{
-        color: rgb(255, 112, 112);
+        color: #eee;
         text-decoration: none;
     }
 

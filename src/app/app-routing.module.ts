@@ -20,6 +20,10 @@ const routes: Routes = [
   },  {
     path: 'rocover-pass',
     loadChildren: () => import('./pages/rocover-pass/rocover-pass.module').then( m => m.RocoverPassPageModule)
+  },
+  {
+    path: 'add-user',
+    loadChildren: () => import('./pages/add-user/add-user.module').then( m => m.AddUserPageModule)
   }
 
 ];

@@ -8,32 +8,36 @@
 </ion-header>
 
 <ion-content>
-  <form action="" autocomplete="off">
+  <form [formGroup]="addUserForm" autocomplete="off">
     <ion-item>
       <ion-label position="floating">Nombre:</ion-label>
-      <ion-input placeholder="Enter text"></ion-input>
-    </ion-item>      
+      <ion-input placeholder="Ingresa texto" formControlName="nombre"></ion-input>
+    </ion-item>  
     <ion-item>
       <ion-label position="floating">Matricula</ion-label>
-      <ion-input placeholder="Enter text"></ion-input>
-    </ion-item>      
+      <ion-input placeholder="Ingresa texto" formControlName="matricula"></ion-input>
+    </ion-item>    
+    <ion-item>
+      <ion-label position="floating">Apellidos:</ion-label>
+      <ion-input placeholder="Ingresa texto" formControlName="apellidos"></ion-input>
+    </ion-item>            
     <ion-item>
       <ion-label position="floating">Carrera</ion-label>
-      <ion-input placeholder="Enter text"></ion-input>
+      <ion-input placeholder="Ingresa texto" formControlName="carrera"></ion-input>
     </ion-item>      
     <ion-item>
       <ion-label position="floating">Grupo</ion-label>
-      <ion-input placeholder="Enter text"></ion-input>
+      <ion-input placeholder="Ingresa texto" formControlName="grupo"></ion-input>
     </ion-item>      
     <ion-item>
       <ion-label position="floating">Correo</ion-label>
-      <ion-input placeholder="Enter text"></ion-input>
+      <ion-input placeholder="Ingresa texto" formControlName="correo"></ion-input>
     </ion-item>      
     <ion-item>
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input placeholder="Enter text"></ion-input>
+      <ion-input placeholder="Enter text" formControlName="password" type="password"></ion-input>
     </ion-item>  
-    <ion-button class="ion-margin-top ion-margin-horizontal" expand="block">
+    <ion-button color="tertiary"  class="ion-margin-top ion-margin-horizontal" expand="block" (click)="addUser(addUserForm);" >
       Guardar
     </ion-button>    
   </form>

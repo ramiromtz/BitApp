@@ -16,9 +16,14 @@ export class Tab1Page {
   escanear() {
     this.barcodeScanner.scan().then(barcodeData => {
       this.data = barcodeData.text;
+      if (this.data == 123456789) {
+        alert("Usuario encontrado");
+      } else {
+        alert("Usuario no encontrado");
+      }
     }).catch(err => {
       console.log("Error: ", err);
-    });
+    });  
   }
 
 }

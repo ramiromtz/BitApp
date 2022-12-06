@@ -1,5 +1,31 @@
-<ion-content fullscreen="true">
-  <div class="contenedor">
-    <h1>Hola mundo</h1>
-  </div>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-img src="../../../assets/img/portada.jpg"></ion-img>
+      <ion-button color="tertiary" style="position: absolute; left: 50%; top: 50%; margin-top: -22.4px; margin-left: -50px;" (click)="setCookie(1);">Ver taller</ion-button>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card class="ion-margin-top">
+    <ion-card-header>
+      <ion-img src="../../../assets/img/taller2.jpg"></ion-img>
+      <ion-button color="tertiary" style="position: absolute; left: 50%; top: 50%; margin-top: -22.4px; margin-left: -50px;" (click)="setCookie(2)"  >Ver taller</ion-button>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card class="ion-margin-top">
+    <ion-card-header>
+      <ion-img src="../../../assets/img/taller3.jpg"></ion-img>
+      <ion-button color="tertiary" style="position: absolute; left: 50%; top: 50%; margin-top: -22.4px; margin-left: -50px;" (click)="setCookie(3)" >Ver taller</ion-button>
+    </ion-card-header>
+  </ion-card>
 </ion-content>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
+import { LoginServiceService } from 'src/app/services/login-service.service';
 
 
 @Component({
@@ -16,22 +17,26 @@ export class LoginPage implements OnInit {
 
   constructor(private route: Router,
               private fb: FormBuilder,
-              private loadingCtrl: LoadingController) { }
+              private loadingCtrl: LoadingController,
+              private loginService: LoginServiceService) { }
 
   ngOnInit() {
   }
 
   // validar formulario
   loginForm: FormGroup = this.fb.group({
-    email: ['', [Validators.required, Validators.pattern(this.correo)]],
+    correo: ['', [Validators.required, Validators.pattern(this.correo)]],
     password: ['', [Validators.required]]
   });
 
   // Función para iniciar sesión
   entrar() {
     if (this.loginForm.valid) {
-      this.showLoading();
-      return
+      this.showLoading().then(() => {
+        this.loginService.login(this.loginForm.value).subscribe(data => {
+          data == 'success' ? this.route.navigate(['/home']) : alert('Usuario o contraseña incorrecto');
+        });
+      });
     }
     this.loginForm.markAllAsTouched()
   }
@@ -48,12 +53,7 @@ export class LoginPage implements OnInit {
       duration: 2000,
     });
 
-    loading.present().then(() => {
-      setTimeout(() => {
-        this.route.navigate(['/tabs/tab1'])
-      },2000)
-      
-    });
+    loading.present();
   }
 
 }

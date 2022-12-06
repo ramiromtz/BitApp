@@ -12,18 +12,23 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),
   },
   {
     path: 'list',
     loadChildren: () => import('./pages/list/list.module').then( m => m.ListPageModule)
-  },  {
+  },
+  {
     path: 'rocover-pass',
     loadChildren: () => import('./pages/rocover-pass/rocover-pass.module').then( m => m.RocoverPassPageModule)
   },
   {
     path: 'add-user',
     loadChildren: () => import('./pages/add-user/add-user.module').then( m => m.AddUserPageModule)
+  },
+  {
+    path: 'edit-user/:id',
+    loadChildren: () => import('./pages/edit-user/edit-user.module').then( m => m.EditUserPageModule)
   }
 
 ];

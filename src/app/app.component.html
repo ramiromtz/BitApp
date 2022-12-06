@@ -1,37 +1,37 @@
 <ion-app>
-  <ion-split-pane contentId="main" when="md">
-    <!--  the side menu  -->
-    <ion-menu side="start" contentId="main">
-      <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Menú</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-menu-toggle autHide="false">
-            <ion-item>
-              <ion-icon slot="start" name="person" color="tertiary"></ion-icon>
-              <ion-nav-link routerLink="/tabs/tab1">Inicio</ion-nav-link>
-            </ion-item>
-            <ion-item>
-              <ion-icon slot="start" name="person-add" color="tertiary"></ion-icon>
-              <ion-nav-link routerLink="/add-user">Agregar Usuario</ion-nav-link>
-            </ion-item>
-            <ion-item>
-              <ion-icon slot="start" name="log-out" color="tertiary"></ion-icon>
-              <ion-nav-link routerLink="/">Cerrar Sesión</ion-nav-link>
-            </ion-item>
-            <ion-item>
-              <ion-icon slot="start" name="help-circle" color="tertiary"></ion-icon>
-              <ion-nav-link routerLink="/">Ayuda</ion-nav-link>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-  
-    <!-- the main content -->
-    <ion-router-outlet id="main"></ion-router-outlet>
-  </ion-split-pane>
+    <ion-split-pane contentId="main" when="md">
+        <!--  the side menu  -->
+        <ion-menu side="start" contentId="main">
+          <ion-header>
+            <ion-toolbar color="primary">
+              <ion-title class="ion-margin-horizontal">Menú</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content>
+            <ion-list>
+              <ion-menu-toggle autHide="false">
+                <ion-item>
+                  <ion-icon slot="start" name="person" color="tertiary"></ion-icon>
+                  <ion-nav-link routerLink="/home">Inicio</ion-nav-link>
+                </ion-item>
+                <ion-item>
+                  <ion-icon slot="start" name="person-add" color="tertiary"></ion-icon>
+                  <ion-nav-link routerLink="/add-user">Agregar Usuario</ion-nav-link>
+                </ion-item>
+                <ion-item>
+                  <ion-icon slot="start" name="log-out" color="tertiary"></ion-icon>
+                  <ion-nav-link routerLink="/">Cerrar Sesión</ion-nav-link>
+                </ion-item>
+                <ion-item>
+                  <ion-icon slot="start" name="help-circle" color="tertiary"></ion-icon>
+                  <ion-nav-link routerLink="/">Ayuda</ion-nav-link>
+                </ion-item>
+              </ion-menu-toggle>
+            </ion-list>
+          </ion-content>
+        </ion-menu>
+      
+        <!-- the main content -->
+        <ion-router-outlet id="main"></ion-router-outlet>
+      </ion-split-pane>
 </ion-app>
